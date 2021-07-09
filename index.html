@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blake Young</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" type="text/css" href="css/hexagons.css">
+        <link rel="stylesheet" type="text/css" href="css/all.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            function Display(i){
+                
+                $(".active").fadeOut('fast').removeClass("active");
+                var divs = $(".banner").children("div");
+                divs.eq(i).addClass("active").fadeIn();
+        }
+        </script>
+        
+    </head>
+    <body>
+        
+        <div class="banner">
+            <div  class="section active" id="0">
+                <img src="images/blake.jpg" class='headline' alt="Blake Young" title="Blake Young">
+                <h1>Blake Young</h1>
+                <p>Developer - Designer - Maker</p>
+            </div>
+            
+            <div class="section" id="1" style='display:none;'>
+                <i class='fas fa-desktop headline foregroundColor'></i>
+                <h2>Work</h2>
+                <ul class='list'>
+                    <li onclick="Display(4)"><div class='verticalAlign'><i class="fab fa-html5 fa-2x"></i><br>Websites</div></li>
+                    <li onclick="Display(5)"><div class='verticalAlign'><i class="fas fa-pencil-alt fa-2x"></i><br>Graphics</div></li>
+                    <li onclick='window.location = "https://www.github.com/programcore"'><div class='verticalAlign'><i class='fas fa-code fa-2x'></i><br>Code</div></li>
+                </ul>
+            </div>
+            
+            <div class="section" id="2" style='display:none;'>
+                <div class='block'>
+                            <i class="fas fa-file-alt headline foregroundColor"></i>
+                            <h2>
+                                Resum&#233;
+                            </h2>
+                            <br>
+                            <p>
+                                Considering me for a position at your workplace? Take a look at some of my experience and skills.
+                            </p>
+                            <br>
+                            <!--<div onclick='window.location = "https://1drv.ms/b/s!AlEIXNusMSOvsH-acDcGVO5ICPdd?e=PVxsBe"'' class='button'>
+                                <div class="verticalAlign">Resum&#233;</div>
+                            </div>-->
+                            <a href="https://1drv.ms/b/s!AlEIXNusMSOvsH-acDcGVO5ICPdd?e=PVxsBe"  target="_blank"><div class="button"><div class="verticalAlign">Resum&#233;</div></div></a>
+                            
+                </div>
+            </div>
+            
+            <div class="section" id="3" style='display:none;'>
+                <div class='block'>
+                        <i class='fas fa-envelope-open headline foregroundColor'></i>
+                        <h2>Talk</h2>
+                        <!--<br>
+                        <p>Email:</p>
+                        <p>blakey-01@hotmail.com</p>
+                        <br>
+                        <p>Phone:</p>
+                        <p>254-383-5472</p>
+                        <br>-->
+                        <br>
+                        <p>Peruse and chat!</p>
+                        <ul>
+                            <li><a href='https://www.linkedin.com/in/blake-young-836aa311b'><i class="fab fa-5x fa-linkedin"></i></a></li>
+                            <li><a href='https://www.github.com/programcore'><i class="fab fa-5x fa-github-square"></i></a></li>
+                            <li><a href='tel:2543835472'><i class='fa fa-5x fa-phone-square'></i></a></li>
+                            <li><a href='mailto:blakey-01@hotmail.com'><i class='fa fa-5x fa-envelope-square'></i></a></li>
+                        </ul>
+                    
+                </div>
+            </div>
+            
+            <!--<div class="section" id="4" style='display:none;'>
+                <p>
+                    Making things is fun
+                </p>
+            </div>-->
+            
+            <div class="section" id="4" style='display:none;'>
+                    <i class='fab fa-html5 headline foregroundColor'></i>
+                    <h2>Websites</h2>
+                    <ul class='list'>
+                        <!--<li onclick='window.location = "http://www.bighossbbq.com"' ><div class='verticalAlign'>Big Hoss BBQ</div></li>
+                        <li onclick='window.location = "http://www.tenroc.com"'><div class='verticalAlign'>Tenroc Ranch</div></li>
+                        <li onclick='window.location = "http://www.careerstartshere.us"'><div class='verticalAlign'>Career Starts Here</div></li>
+                        <li onclick='window.location = "http://www.dtm32412.com"'><div class='verticalAlign'>Kwik Kar</div></li>-->
+                        <a href="http://www.bighossbbq.com" target="_blank"><li><div class='verticalAlign'>Big Hoss BBQ</div></li></a>
+                        <a href="http://www.tenroc.com" target="_blank"><li><div class='verticalAlign'>Tenroc Ranch</div></li></a>
+                        <li><div class='verticalAlign'>This portfolio <i class="fas fa-smile-wink"></i></div></li>
+                    </ul>
+            </div>
+            
+            <div class="section" id="5" style='display:none;'>
+                    <i class='fas fa-pencil-alt headline foregroundColor'></i>
+                    <h2>Graphics</h2>
+                    <br/>
+                    <ul class='gallery'>
+                        <li><img src='images/img1.jpg' alt='Big Hoss Brochures'></li>
+                        <li><img src='images/img2.jpg' alt='Album'></li>
+                        <li><img src='images/img3.jpg' alt='Oktoberfest Poster'></li>
+                        <li><img src='images/img4.jpg' alt='Invitation'></li>
+                        <li><img src='images/img5.jpg' alt='Big Hoss Veterans'></li>
+                        <li><img src='images/img6.jpg' alt='Big Hoss Menu'></li>
+                        <li><img src='images/img7.jpg' alt='MRC Logo'></li>
+                        <li><img src='images/img8.jpg' alt='Counseling Poster'></li>
+                    </ul>
+            </div>
+        </div>
+        
+        <div class="wrapper">
+            <nav>
+                <ul>
+                    <li onclick="Display(0)"><div class="verticalAlign"><i class="fa fa-home"></i><br>Hi</div></li>
+                    <li onclick="Display(1)"><div class="verticalAlign"><i class="fa fa-desktop"></i><br>Work</div></li>
+                    <li onclick="Display(2)"><div class="verticalAlign"><i class="fas fa-file-alt"></i><br>Resum&#233;</div></li>
+                    <li onclick="Display(3)"><div class="verticalAlign"><i class="fa fa-envelope"></i><br>Talk</div></li>
+                    <!--<li><a onclick="Display(4)"><div class="verticalAlign"><i class="fa fa-user"></i><br>Me</div></a></li>-->
+                </ul>
+            </nav>
+        </div>
+        
+    </body>
+</html>

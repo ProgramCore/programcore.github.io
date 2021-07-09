@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One|Russo+One');
+
+$bkgColor: #262521;
+$color: #bfb899;
+
+@mixin verticalAlign()
+{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin transitionColor($prop)
+{
+    -webkit-transition: $prop .3s ease;
+    -moz-transition: $prop .3s ease;
+    -ms-transition: $prop .3s ease;
+    -o-transition: $prop .3s ease;
+    transition: $prop .3s ease;
+
+}
+
+body{
+    margin:0;
+    background-color: $bkgColor;
+    color:$color;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color:$color;
+
+    &:visited{
+        color:$color;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, h7{font-family: 'Russo One', sans-serif; text-transform: uppercase;}
+
+nav{
+    width: 100%;
+    margin:0;
+    text-transform: uppercase;
+
+
+    ul{
+        list-style: none;
+        text-align: center;
+        padding:0;
+
+        li{
+            width: 100px;
+            height: 100px;
+            margin: 0px auto;
+            display:inline-block;
+            background-color:#24231f;
+            @include transitionColor(background-color);
+            
+            &:hover{
+                background-color: white;
+            }
+        }
+    }
+}
+
+.banner{
+    width:100%;
+    min-height: 300px;
+    max-height: 100%;
+    margin:0 auto;
+    background-color:$color;
+    margin-top: 200px;
+    margin-bottom: 20px;
+    text-align:center;
+    color:$bkgColor;
+    
+
+    .headline{
+        margin-top:-150px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 200px 200px 200px 200px;
+        max-width: 100%;
+        max-height:auto;
+        font-size: 6em;
+    }
+
+    .foregroundColor{
+        color:$color;
+        background-color:$bkgColor;
+        width:150px;
+        padding-bottom: 5px;
+        a{
+            color:$color;
+
+            &:visited{
+                color:$color;
+            }
+        }
+    }
+}
+
+.wrapper{
+    width:100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.verticalAlign{
+    @include verticalAlign();
+}
+
+.section{
+    display:none;
+}
+
+.button{
+    background-color: $bkgColor;
+    border: 2px solid black;
+    color:$color;
+    width:100%;
+    max-width: 300px;
+    height:60px;
+    margin:0 auto;
+    border-radius: 5px 5px 5px 5px;
+    @include transitionColor(background-color);
+    
+    
+    span{
+        margin-top:20px;
+    }
+    
+    &:hover{
+        color:$bkgColor;
+        background-color:$color;
+        
+    }
+    
+    &:focus{
+        background-color:white;
+    }
+}
+
+.active{
+    display:initial;
+
+
+    .list{
+        list-style: none;
+        text-align: center;
+        padding:0;
+        margin-top: 20px;
+        color:$color;
+
+
+        li{
+            width:20%;
+            min-width:150px;
+            height:150px;
+            margin: 0px auto;
+            display:inline-block;
+            background-color:$bkgColor;
+            @include transitionColor(background-color);
+
+            img{display:initial;}
+
+            &:hover{
+                background-color: white;
+            }
+        }
+    }
+
+    .block{
+        width: 33.33%;
+        min-width: 270px;
+        height:300px;
+        margin: auto;
+        color:$bkgColor;
+
+        ul{
+            list-style: none;
+            
+            li{
+                display:inline-block;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+        
+        a{
+            color:$bkgColor;
+            
+            &:hover{
+                color:white;
+            }
+        }
+
+
+    }
+
+    .paper{
+        width: 33.33%;
+        min-width:270px;
+        height:300px;
+        margin: auto;
+        background-color: white;
+        color: black;
+        background-image: url("images/lines.png");
+        background-repeat: repeat;
+        @include transitionColor(background-color);
+        line-height:2;
+
+        a{
+            color:black;
+
+
+            &:hover{
+                color:$color;
+            }
+
+            &:visited{
+                color:black;
+            }
+        }
+
+        &:hover{
+            background-color:$color;
+        }
+    }
+
+    .gallery{
+        list-style: none;
+        text-align: center;
+        margin-top:5px;
+        padding:0;
+
+        li{
+            width: 120px;
+            height: 120px;
+            margin: 0px auto;
+            display:inline-block;
+            background-color:none;
+            @include transitionColor(all);
+            
+            &:hover{
+                box-shadow: 0px 0px 15px $bkgColor;
+                transform: scale(3);
+            }
+        }
+        img{
+            width: 120px;
+            height: 120px;
+        }
+    }
+}
